@@ -61,7 +61,7 @@ def setup(hass, config):
 
         sensor_name = config[DOMAIN].get(CONF_SENSOR_NAME)
         hass.states.set("sensor.%s_total" % (sensor_name), len(real_lights_entitites), { "entities": ', '.join(map( lambda entity: entity["entity_id"], real_lights_entitites)), "friendly_names": ', '.join(map( lambda entity: entity["friendly_name"], real_lights_entitites )) })
-        hass.states.set("sensor.%s_on" % (sensor_name), len(real_lights_on_list), { "entities": ', '.join(map( lambda entity: entity["entity_id"], real_lights_on_list)), "friendly_names": ', '.join(map( lambda entity: entity["friendly_name"], real_lights_entitites )) } )
+        hass.states.set("sensor.%s_on" % (sensor_name), len(real_lights_on_list), { "entities": ', '.join(map( lambda entity: entity["entity_id"], real_lights_on_list)), "friendly_names": ', '.join(map( lambda entity: entity["friendly_name"], real_lights_on_list )) } )
         
 
 

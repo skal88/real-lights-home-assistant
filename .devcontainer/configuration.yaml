@@ -1,0 +1,39 @@
+default_config:
+logger:
+  default: error
+  logs:
+    custom_components.real_lights: debug
+
+
+
+input_boolean:
+  test_light_1:
+    name: Status test light 1
+  test_light_2:
+    name: Status test light 2
+
+light:
+  - platform: template
+    lights:
+      test_1:
+        friendly_name: Test Light 1
+        turn_on:
+          service: input_boolean.turn_on
+          entity_id: input_boolean.test_light_1
+        turn_off:
+          service: input_boolean.turn_off
+          entity_id: input_boolean.test_light_1
+      test_2:
+        friendly_name: Test Light 2
+        turn_on:
+          service: input_boolean.turn_on
+          entity_id: input_boolean.test_light_2
+        turn_off:
+          service: input_boolean.turn_off
+          entity_id: input_boolean.test_light_2
+
+
+real_lights:
+  entities:
+    - light.test_1
+    - light.test_2

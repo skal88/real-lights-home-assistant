@@ -1,0 +1,8 @@
+{
+    "domain": "real_lights",
+    "name": "Real lights",
+    "documentation": "https://github.com/skal88/real-lights-home-assistant",
+    "dependencies": [],
+    "codeowners": ["@skal88"],
+    "requirements": []
+  }

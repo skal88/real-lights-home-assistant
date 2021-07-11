@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# This file must be saves al only LF to prevent windows issue with CRLF format
+
 function StartHomeAssistant {
   echo "Copy configuration.yaml"
   cp -f .devcontainer/configuration.yaml /config || echo ".devcontainer/configuration.yaml are missing!" exit 1
